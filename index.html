@@ -64,7 +64,7 @@
     resultsP.parent('myContainer556')
     var uttr = new SpeechSynthesisUtterance("I see " + results[0].label);
     uttr.lang = 'en-US';
-    if(uttr.text !== uttr_old.text) { speechSynthesis.speak(uttr); }
+    if(uttr.text !== uttr_old.text) {  speechSynthesis.cancel(); speechSynthesis.speak(uttr); }
     uttr_old = uttr;
     console.log(uttr, uttr_old, results[0].confidence);
     classifyVideo();
